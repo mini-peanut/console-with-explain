@@ -1,6 +1,6 @@
 {
-  "name": "clearConsolec",
-  "version": "1.0.0",
+  "name": "console-with-explain",
+  "version": "1.0.8",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -10,9 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "huax",
   "license": "ISC",
-  "dependencies": {
-    "source-map": "^0.6.1"
-  }
+  "dependencies": {}
 }
