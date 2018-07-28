@@ -9,6 +9,7 @@ npm install console-with-explain
 
 main.js 全局替换console
 ```javascript
+// 浏览器环境
 if (process.env.NODE_ENV === 'development') {
     const createConsole = require('console-with-explain')
     window.console = createConsole({preClear: true})
