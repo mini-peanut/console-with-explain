@@ -18,10 +18,11 @@ if (process.env.NODE_ENV === 'development') {
 
 其他文件 直接使用console
 ```javascript
-function test() {
-    console.log(124);
+// ...otherCode
+mounted() {
+  console.log('here);
 }
-
+// ...other code
 test();
 ```
 
