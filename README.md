@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === 'development') {
 ```javascript
 // ...otherCode
 mounted() {
-  console.log('here);
+  console.log('here');
 }
 // ...other code
 test();
