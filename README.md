@@ -23,7 +23,7 @@ mounted() {
   console.log('here');
 }
 // ...other code
-test();
+
 ```
 
 ## 效果图
