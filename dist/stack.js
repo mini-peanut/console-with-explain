@@ -1,4 +1,16 @@
-'use strict';
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _getOwnPropertyNames = require('babel-runtime/core-js/object/get-own-property-names');
+
+var _getOwnPropertyNames2 = _interopRequireDefault(_getOwnPropertyNames);
+
+var _stringify = require('babel-runtime/core-js/json/stringify');
+
+var _stringify2 = _interopRequireDefault(_stringify);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var cache = {};
 
@@ -25,7 +37,7 @@ Object.defineProperty(global, '__consoleLocation__', {
         var lineNumber = __stack__[3].getLineNumber();
         var columnNumber = __stack__[3].getColumnNumber();
 
-        var key = JSON.stringify({ fileName: fileName, functionName: functionName, lineNumber: lineNumber, columnNumber: columnNumber });
+        var key = (0, _stringify2.default)({ fileName: fileName, functionName: functionName, lineNumber: lineNumber, columnNumber: columnNumber });
 
         var location = cache[key];
 
@@ -57,7 +69,7 @@ function wrapCallSite(frame) {
 
 function cloneCallSite(frame) {
 
-    var propertyNames = Object.getOwnPropertyNames(Object.getPrototypeOf(frame));
+    var propertyNames = (0, _getOwnPropertyNames2.default)((0, _getPrototypeOf2.default)(frame));
 
     return propertyNames.reduce(function (ret, name) {
 

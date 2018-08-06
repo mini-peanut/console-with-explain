@@ -1,11 +1,21 @@
-'use strict';
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _typeof2 = require('babel-runtime/helpers/typeof');
+
+var _typeof3 = _interopRequireDefault(_typeof2);
+
+var _assign = require('babel-runtime/core-js/object/assign');
+
+var _assign2 = _interopRequireDefault(_assign);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 require('./stack');
 
-var __consoleA__ = Object.assign({}, window.console);
-var __consoleB__ = Object.assign({}, window.console);
+var __consoleA__ = (0, _assign2.default)({}, window.console);
+var __consoleB__ = (0, _assign2.default)({}, window.console);
 
 var prevLocation = '';
 
@@ -31,7 +41,7 @@ function createConsole() {
 
     __consoleB__.log('%c' + startText, 'font-size:50px;color:#fff;text-shadow:0 1px 0#ccc,0 2px 0  #c9c9c9 ,0 3px 0  #bbb ,0 4px 0  #b9b9b9 ,0 5px 0  #aaa ,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);');
 
-    return Object.assign(__consoleA__, {
+    return (0, _assign2.default)(__consoleA__, {
         log: function log() {
             if (prevLocation !== __consoleLocation__) {
 
@@ -63,7 +73,7 @@ function createConsole() {
 }
 
 function isPlainObject(obj) {
-    return obj ? (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) === 'object' && Object.getPrototypeOf(obj) === Object.prototype : false;
+    return obj ? (typeof obj === 'undefined' ? 'undefined' : (0, _typeof3.default)(obj)) === 'object' && (0, _getPrototypeOf2.default)(obj) === Object.prototype : false;
 }
 
 module.exports = createConsole;
