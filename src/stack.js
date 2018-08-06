@@ -2,9 +2,9 @@ const cache = {};
 
 
 Object.defineProperty(global, '__stack__', {
-    get: function() {
+    get: function () {
         const orig = Error.prepareStackTrace;
-        Error.prepareStackTrace = function(_, stack) {
+        Error.prepareStackTrace = function (_, stack) {
             return stack;
         };
         const err = new Error;
@@ -18,13 +18,13 @@ Object.defineProperty(global, '__stack__', {
 });
 
 Object.defineProperty(global, '__consoleLocation__', {
-    get: function() {
+    get: function () {
         let fileName = __stack__[3].getFileName();
         let functionName = __stack__[3].getFunctionName();
         let lineNumber = __stack__[3].getLineNumber();
         let columnNumber = __stack__[3].getColumnNumber();
 
-        const key = JSON.stringify({fileName, functionName,lineNumber, columnNumber});
+        const key = JSON.stringify({fileName, functionName, lineNumber, columnNumber});
 
         let location = cache[key];
 
@@ -63,7 +63,9 @@ function cloneCallSite(frame) {
 
     return propertyNames.reduce((ret, name) => {
 
-        ret[name] = /^(?:is|get)/.test(name) ? function() { return frame[name].call(frame); } : frame[name];
+        ret[name] = /^(?:is|get)/.test(name) ? function () {
+            return frame[name].call(frame);
+        } : frame[name];
 
         return ret;
     }, {});
