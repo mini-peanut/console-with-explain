@@ -1,3 +1,5 @@
+'use strict';
+
 var cache = {};
 
 Object.defineProperty(global, '__stack__', {

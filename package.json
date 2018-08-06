@@ -1,6 +1,6 @@
 {
   "name": "console-with-explain",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "",
   "main": "dist/index.js",
   "directories": {
@@ -24,7 +24,6 @@
       [
         "env",
         {
-          "modules": false,
           "targets": {
             "browsers": [
               "> 1%",
