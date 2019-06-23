@@ -1,5 +1,5 @@
 # console-with-explain
-输出console时自动带上该console所在方法名，文件名，和行数, 支持sourcemap 
+用于调试框架源码：输出console时自动带上该console所在方法名，文件名，和行数
 
 ## 使用
 ```javascript
